@@ -12,11 +12,11 @@ main{
   padding: 0;
   margin: 0;
 }
-#edward{
-  font-size: 2.5em;
+#name{
+  font-size: 2em;
   color: #fff;
 }
-#edward .letterE{
+#name .letterE{
   color: #CE9A6E;
   font-size: 1.5em;
 }
