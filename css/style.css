@@ -262,9 +262,19 @@ main{
 }
 
 body {
-    margin-top: 30px;
+    margin-top: 0;
     background-color:#eee;
 }
+
+@media (max-width: 768px) {
+body {
+    text-align: center;
+    display: inline-block;
+    padding-left:10px;
+}
+}
+
+
 */
 .image_blog {
     /*min-height: 70vh;*/
