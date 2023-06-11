@@ -519,3 +519,17 @@ p {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+
+
+/* CSS để tùy chỉnh giao diện màn hình chờ */
+#loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+#loading-image {
+  max-width: 200px;
+}
+

@@ -22,7 +22,12 @@
 </head>
 
 <body class="fixed-sn black-skin">
-
+  
+  <div id="loading-screen">
+    <img id="loading-image" src="img/loading_img.gif" alt="loading...">
+  </div>
+  
+  
   <!--Double navigation-->
   <header>
     <!-- Sidebar navigation -->
@@ -1140,4 +1145,11 @@
 	
     </script>
 	
+	<script>
+    // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải
+    window.addEventListener('load', function() {
+      var loadingScreen = document.getElementById('loading-screen');
+      loadingScreen.style.display = 'none';
+    });
+  </script>
   </body>
