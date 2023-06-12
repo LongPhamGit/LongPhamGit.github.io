@@ -158,7 +158,7 @@
         <!--Grid row-->
       </section>
       <!--Section: My Services-->
-      <section class="text-center">
+      <section id="MyServices" class="text-center">
 		<div class="container">
         <div>          
           <!-- Section heading -->
@@ -1162,7 +1162,10 @@
     // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải
     window.addEventListener('load', function() {
       var loadingScreen = document.getElementById('loading-screen');
+	  var services = document.getElementById('MyServices');
+	  
       loadingScreen.style.display = 'none';
+	  services.style.display = 'block'; 
     });
   </script>
   </body>
