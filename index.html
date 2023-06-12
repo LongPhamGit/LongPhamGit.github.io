@@ -1162,8 +1162,7 @@
     // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải
     window.addEventListener('load', function() {
       var loadingScreen = document.getElementById('loading-screen');
-	  var services = document.getElementById('education');
-	  var sectionId = 'MyServices';
+	  var sectionId = 'education';
 	  setTimeout(function() {
       var section = document.getElementById(sectionId);
       if (section) {
@@ -1174,7 +1173,7 @@
       window.scrollTo(0, 0);
     }, 1000);
   }, 500);
-	  
+	  setTimeout(1000);
 	  loadingScreen.style.display = 'none';
 });
   </script>
