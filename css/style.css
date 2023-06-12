@@ -532,7 +532,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền trong suốt */
   z-index: 9999; /* Đặt lớp trên cùng */
 }
 #loading-image {
