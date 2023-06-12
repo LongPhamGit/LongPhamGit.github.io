@@ -112,7 +112,7 @@
     
       <!--Section: Team v.1-->
     <section class="text-center team-section border-top">
-		<div class="container">
+		<div class="container" id = "topSite">
         <!--Grid row-->
 			<div class="row text-center">
 
@@ -158,9 +158,9 @@
         <!--Grid row-->
       </section>
       <!--Section: My Services-->
-      <section id="MyServices" class="text-center">
+      <section class="text-center">
 		<div class="container">
-        <div>          
+        <div id="MyServices">          
           <!-- Section heading -->
 		  <h6 id="expertise" class="font-weight-normal text-uppercase font-small mb-4">Expertise</h6>
           <h3 class="font-weight-bold mb-4 pb-2 text-3d">My Services</h3>		  
@@ -1163,9 +1163,19 @@
     window.addEventListener('load', function() {
       var loadingScreen = document.getElementById('loading-screen');
 	  var services = document.getElementById('MyServices');
+	  var sectionId = 'MyServices';
+	  setTimeout(function() {
+      var section = document.getElementById(sectionId);
+      if (section) {
+      section.scrollIntoView();
+	  }
 	  
-      loadingScreen.style.display = 'none';
-	  services.style.display = 'block'; 
-    });
+	   setTimeout(function() {
+      window.scrollTo(0, 0);
+    }, 1000);
+  }, 500);
+	  
+	  loadingScreen.style.display = 'none';
+});
   </script>
   </body>
