@@ -27,19 +27,6 @@
     <img id="loading-image" src="img/loading_img.gif" alt="loading...">
   </div>
   
-<!--  <div class="loading-screen">
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
-</div>-->
-  
   <!--Double navigation-->
   <header>
     <!-- Sidebar navigation -->
@@ -1248,9 +1235,9 @@
 	
   <script>
     // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải
-    window.addEventListener('load', function() {
+    /*window.addEventListener('load', function() {
       var loadingScreen = document.getElementById('loading-screen');
-	  /*var sectionId = 'education';
+	  var sectionId = 'education';
 	  setTimeout(function() {
       var section = document.getElementById(sectionId);
       if (section) {
@@ -1261,8 +1248,41 @@
       window.scrollTo(0, 0);
     }, 1000);
   }, 500);
-	  setTimeout(1000);*/
+	  setTimeout(1000);
 	  loadingScreen.style.display = 'none';
-});
+});*/
+
+	    // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải hoặc sau 5 giây
+    window.addEventListener('load', function() {
+        var loadingScreen = document.getElementById('loading-screen');
+        var sectionId = 'education';
+
+        // Tạo cờ để theo dõi xem tài nguyên đã tải xong chưa
+        var resourcesLoaded = false;
+
+        // Ẩn màn hình chờ nếu tài nguyên đã tải xong
+        function hideLoadingScreen() {
+            if (loadingScreen && loadingScreen.style.display !== 'none') {
+                loadingScreen.style.display = 'none';
+                if (sectionId) {
+                    var section = document.getElementById(sectionId);
+                    if (section) {
+                        section.scrollIntoView();
+                    }
+                }
+            }
+        }
+
+        // Ẩn màn hình chờ sau 5 giây nếu tài nguyên chưa tải xong
+        setTimeout(function() {
+            hideLoadingScreen();
+        }, 5000);
+
+        // Khi tài nguyên tải xong, kiểm tra và ẩn màn hình chờ
+        window.addEventListener('load', function() {
+            resourcesLoaded = true;
+            hideLoadingScreen();
+        });
+    });
   </script>
   </body>
