@@ -1255,7 +1255,7 @@
 	    // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải hoặc sau 5 giây
     window.addEventListener('load', function() {
         var loadingScreen = document.getElementById('loading-screen');
-        var sectionId = 'education';
+        var sectionId = 'text-center';
 
         // Tạo cờ để theo dõi xem tài nguyên đã tải xong chưa
         var resourcesLoaded = false;
@@ -1273,10 +1273,10 @@
             }
         }
 
-        // Ẩn màn hình chờ sau 5 giây nếu tài nguyên chưa tải xong
+        // Ẩn màn hình chờ sau 3 giây nếu tài nguyên chưa tải xong
         setTimeout(function() {
             hideLoadingScreen();
-        }, 5000);
+        }, 3000);
 
         // Khi tài nguyên tải xong, kiểm tra và ẩn màn hình chờ
         window.addEventListener('load', function() {
