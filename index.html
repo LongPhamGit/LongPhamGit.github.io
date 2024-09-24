@@ -19,6 +19,37 @@
   <link href="css/mdb-pro.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải
+    /*window.addEventListener('load', function() {
+      var loadingScreen = document.getElementById('loading-screen');
+	  var sectionId = 'education';
+	  setTimeout(function() {
+      var section = document.getElementById(sectionId);
+      if (section) {
+      section.scrollIntoView();
+	  }
+	  
+	   setTimeout(function() {
+      window.scrollTo(0, 0);
+    }, 1000);
+  }, 500);
+	  setTimeout(1000);
+	  loadingScreen.style.display = 'none';
+});*/
+
+
+		window.addEventListener('load', function() {
+			var loadingScreen = document.getElementById('loading-screen');
+
+			// Ẩn màn hình chờ sau 3 giây
+			setTimeout(function() {
+				if (loadingScreen && loadingScreen.style.display !== 'none') {
+					loadingScreen.style.display = 'none';
+				}
+			}, 3000); // 3000ms = 3 giây
+		});
+  </script>
 </head>
 
 <body class="fixed-sn black-skin">
@@ -1232,36 +1263,4 @@
         .start();
 	
     </script>
-	
-  <script>
-    // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải
-    /*window.addEventListener('load', function() {
-      var loadingScreen = document.getElementById('loading-screen');
-	  var sectionId = 'education';
-	  setTimeout(function() {
-      var section = document.getElementById(sectionId);
-      if (section) {
-      section.scrollIntoView();
-	  }
-	  
-	   setTimeout(function() {
-      window.scrollTo(0, 0);
-    }, 1000);
-  }, 500);
-	  setTimeout(1000);
-	  loadingScreen.style.display = 'none';
-});*/
-
-
-		window.addEventListener('load', function() {
-			var loadingScreen = document.getElementById('loading-screen');
-
-			// Ẩn màn hình chờ sau 3 giây
-			setTimeout(function() {
-				if (loadingScreen && loadingScreen.style.display !== 'none') {
-					loadingScreen.style.display = 'none';
-				}
-			}, 3000); // 3000ms = 3 giây
-		});
-  </script>
   </body>
