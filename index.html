@@ -1252,37 +1252,16 @@
 	  loadingScreen.style.display = 'none';
 });*/
 
-	    // JavaScript để ẩn màn hình chờ sau khi tài nguyên đã tải hoặc sau 5 giây
-    window.addEventListener('load', function() {
-        var loadingScreen = document.getElementById('loading-screen');
-        var sectionId = 'text-center';
 
-        // Tạo cờ để theo dõi xem tài nguyên đã tải xong chưa
-        var resourcesLoaded = false;
+		window.addEventListener('load', function() {
+			var loadingScreen = document.getElementById('loading-screen');
 
-        // Ẩn màn hình chờ nếu tài nguyên đã tải xong
-        function hideLoadingScreen() {
-            if (loadingScreen && loadingScreen.style.display !== 'none') {
-                loadingScreen.style.display = 'none';
-                if (sectionId) {
-                    var section = document.getElementById(sectionId);
-                    if (section) {
-                        //section.scrollIntoView();
-                    }
-                }
-            }
-        }
-
-        // Ẩn màn hình chờ sau 3 giây nếu tài nguyên chưa tải xong
-        setTimeout(function() {
-            hideLoadingScreen();
-        }, 3000);
-
-        // Khi tài nguyên tải xong, kiểm tra và ẩn màn hình chờ
-        window.addEventListener('load', function() {
-            resourcesLoaded = true;
-            hideLoadingScreen();
-        });
-    });
+			// Ẩn màn hình chờ sau 3 giây
+			setTimeout(function() {
+				if (loadingScreen && loadingScreen.style.display !== 'none') {
+					loadingScreen.style.display = 'none';
+				}
+			}, 3000); // 3000ms = 3 giây
+		});
   </script>
   </body>
