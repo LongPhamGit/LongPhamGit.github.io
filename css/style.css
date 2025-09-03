@@ -545,7 +545,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background: #0077b6;
+  background: #e2750f;
   color: white;
 }
 
@@ -588,7 +588,7 @@ p {
         top: 60px; /* cao bằng navbar */
         right: 0;
         left: 0;
-        background: #0077b6;
+        background: #e2750f;
         flex-direction: column;
         align-items: center;
         display: none;
@@ -614,10 +614,12 @@ p {
 }
 
 .nav-links a:hover {
-  background: #b86405;   /* đổi màu nền khi hover */
   color: #ffffff;        /* đổi màu chữ khi hover */
   transform: scale(1.05); /* phóng to nhẹ khi hover */
   border-radius: 4px;
+}
+.nav-links li:hover {
+  background: #b86405;   /* đổi màu nền khi hover */
 }
  /*#MyServices {
       display: none; 
