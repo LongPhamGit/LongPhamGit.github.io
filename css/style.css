@@ -579,24 +579,30 @@ p {
 }
 
 /* Ẩn menu khi màn hình nhỏ */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #dd610b;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
-}
+ @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-links {
+        position: absolute;
+        top: 60px; /* cao bằng navbar */
+        right: 0;
+        left: 0;
+        background: #0077b6;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        z-index: 999;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
 
 .nav-links a {
   color: white;
@@ -611,6 +617,7 @@ p {
   background: #b86405;   /* đổi màu nền khi hover */
   color: #ffffff;        /* đổi màu chữ khi hover */
   transform: scale(1.05); /* phóng to nhẹ khi hover */
+  border-radius: 4px;
 }
  /*#MyServices {
       display: none; 
