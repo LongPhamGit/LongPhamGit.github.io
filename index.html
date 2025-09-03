@@ -53,6 +53,31 @@
 </head>
 
 <body class="fixed-sn black-skin">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Long Pham</h2>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+	  <li><a href="#experience">Experience</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+	  <li><a href="#Tips">Tips</a></li>
+    </ul>
+  </nav>
+  <!-- JS -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   
   <div id="loading-screen">
     <img id="loading-image" src="img/loading_img.gif" alt="loading...">
@@ -266,7 +291,7 @@
         </div>
       </section>
       <!--Section: experience-->
-      <section>
+      <section id="skills">
 	  <div class="container">
         <div class="jumbotron glass-box-effects text-center">          
           <!-- Section heading -->

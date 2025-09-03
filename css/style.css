@@ -539,6 +539,79 @@ p {
   max-width: 200px;
 }
 
+/* Thanh menu */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #0077b6;
+  color: white;
+}
+
+/* 3 dấu gạch */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Menu xổ xuống */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Ẩn menu khi màn hình nhỏ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #dd610b;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  transition: all 0.3s ease; /* hiệu ứng mượt */
+}
+
+.nav-links a:hover {
+  background: #b86405;   /* đổi màu nền khi hover */
+  color: #ffffff;        /* đổi màu chữ khi hover */
+  transform: scale(1.05); /* phóng to nhẹ khi hover */
+}
  /*#MyServices {
       display: none; 
     }
