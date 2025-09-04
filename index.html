@@ -49,7 +49,11 @@
 				}
 			}, 1000);
 		});
+		
+
   </script>
+  
+  
 </head>
 
 <body class="fixed-sn black-skin">
@@ -71,12 +75,21 @@
   </nav>
   <!-- JS -->
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  const navItems = document.querySelectorAll('.nav-links a');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+  // Toggle mở/đóng khi bấm 3 gạch
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Tự động đóng menu khi click vào link
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('active');
     });
+  });
   </script>
   
   <div id="loading-screen">
@@ -1347,6 +1360,28 @@
     <!--/.Footer-->
     <!-- SCRIPTS -->
     <!-- JQuery -->
+	<!-- Nút scroll to top -->
+	<button id="scrollTopBtn" title="Go to top">↑</button>
+	<script>
+	// hiện nút khi cuộn xuống
+		window.onscroll = function() {
+		  const btn = document.getElementById("scrollTopBtn");
+		  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+			btn.style.display = "block";
+		  } else {
+			btn.style.display = "none";
+		  }
+		};
+
+		// xử lý click để cuộn lên đầu
+		document.getElementById("scrollTopBtn").addEventListener("click", function() {
+		  window.scrollTo({
+			top: 0,
+			behavior: "smooth" // cuộn mượt
+		  });
+		});
+
+  </script>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/popper.min.js"></script>
