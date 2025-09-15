@@ -90,6 +90,23 @@
       navLinks.classList.remove('active');
     });
   });
+  
+	  // Tự động đóng menu khi click ra ngoài menu
+	document.addEventListener('click', (e) => {
+	  if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+		navLinks.classList.remove('active');
+	  }
+	});
+
+	// Tự động đóng menu khi cuộn trang
+	window.addEventListener('scroll', () => {
+	  navLinks.classList.remove('active');
+	});
+
+	// Tự động đóng menu khi resize màn hình
+	window.addEventListener('resize', () => {
+	  navLinks.classList.remove('active');
+	});
   </script>
   
   <div id="loading-screen">

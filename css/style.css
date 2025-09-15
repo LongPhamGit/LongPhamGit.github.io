@@ -541,6 +541,8 @@ p {
 
 /* Thanh menu */
 .navbar {
+  margin-left: -10px;
+  margin-right: -10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -581,6 +583,7 @@ p {
 /* Ẩn menu khi màn hình nhỏ */
  @media (max-width: 768px) {
       .menu-toggle {
+		margin-right: 10px;
         display: flex;
       }
       .nav-links {
